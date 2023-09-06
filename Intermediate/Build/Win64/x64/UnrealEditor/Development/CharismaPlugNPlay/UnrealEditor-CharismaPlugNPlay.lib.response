@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-CharismaPlugNPlay.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"F:\CharismaWork\GitHub\Unreal SDK\Test\PlugNPlay46\Intermediate\Build\Win64\x64\PlugNPlay46Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.InclOrderUnreal5_0.h.obj"
+"F:\CharismaWork\GitHub\Unreal SDK\Test\PlugNPlay46\Plugins\CharismaPlugNPlay\Intermediate\Build\Win64\x64\UnrealEditor\Development\CharismaPlugNPlay\Module.CharismaPlugNPlay.cpp.obj"
+"F:\CharismaWork\GitHub\Unreal SDK\Test\PlugNPlay46\Plugins\CharismaPlugNPlay\Intermediate\Build\Win64\x64\UnrealEditor\Development\CharismaPlugNPlay\Default.rc2.res"
+/OUT:"F:\CharismaWork\GitHub\Unreal SDK\Test\PlugNPlay46\Plugins\CharismaPlugNPlay\Intermediate\Build\Win64\x64\UnrealEditor\Development\CharismaPlugNPlay\UnrealEditor-CharismaPlugNPlay.lib"

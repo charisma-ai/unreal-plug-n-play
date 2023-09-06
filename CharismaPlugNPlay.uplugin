@@ -1,0 +1,33 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "CharismaPlugNPlay",
+	"Description": "Charisma Plug-n-Play sample Project for Unreal",
+	"Category": "Charisma",
+	"CreatedBy": "Charisma Entertainment",
+	"CreatedByURL": "https://charisma.ai/",
+	"DocsURL": "https://charisma.ai/docs",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "CharismaPlugNPlay",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		}
+	],
+	"Plugins": [
+		{ 
+			"Name": "charisma-unreal",
+			"Enabled": true 
+		} 
+	]
+}
