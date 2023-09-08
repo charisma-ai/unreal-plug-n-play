@@ -8,7 +8,7 @@ If you have any questions or need a hand, please reach out to us at [hello@chari
 
 **Important:** Before setting up the Charisma Plug-N-Play for Unreal Engine, you’ll need to have created a web or game story (not an app story!), which requires a Charisma licence. Please visit the [licencing docs on our website](https://charisma.ai/docs/licencing) for more info!
 
-**Important:** Make sure to install the [Charisma Unreal SDK] (https://github.com/charisma-ai/charisma-sdk-unreal) in order to enable the Plug-N-Play plugin to work.
+**Important:** Make sure to install the [Charisma Unreal SDK](https://github.com/charisma-ai/charisma-sdk-unreal) in order to enable the Plug-N-Play plugin to work.
 
 1. If you haven’t already, go ahead and create an Unreal **C++** project. Make sure you are using a version of the engine that is supported by this plugin.
 
@@ -25,4 +25,4 @@ If you have any questions or need a hand, please reach out to us at [hello@chari
 
 ## Using the Plug-N-Play
 
-Please refer to our [SDK Documentation page] (https://charisma.ai/docs/sdks) and [Unreal Tutorial series] (https://www.youtube.com/playlist?list=PLJL7mxAoErKy_ByCa6C1vb3FEnQnE1-kp) for more information on how to setup and use the Plug-N-Play for your stories!
+Please refer to our [SDK Documentation page](https://charisma.ai/docs/sdks) and [Unreal Tutorial series](https://www.youtube.com/playlist?list=PLJL7mxAoErKy_ByCa6C1vb3FEnQnE1-kp) for more information on how to setup and use the Plug-N-Play for your stories!
