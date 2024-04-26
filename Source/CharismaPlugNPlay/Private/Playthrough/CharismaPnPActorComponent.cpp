@@ -6,8 +6,3 @@
 UCharismaPnPActorComponent::UCharismaPnPActorComponent()
 {
 }
-
-void UCharismaPnPActorComponent::Resolve()
-{
-	OnResolve.Broadcast();
-}

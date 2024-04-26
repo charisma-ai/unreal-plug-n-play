@@ -10,7 +10,7 @@ UCharismaInteractableComponent::UCharismaInteractableComponent()
 void UCharismaInteractableComponent::Interact()
 {
 	// Cannot interact if entity is not Live
-	if (!IsLive)
+	if (!IsOnline)
 	{
 		return;
 	}

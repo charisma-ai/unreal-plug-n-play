@@ -7,6 +7,8 @@
 
 #include "CharismaEntityComponent.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FMessageReceivedDelegate, const FCharismaMessageEvent&, MessageEvent, bool, isEntityMatch);
+
 /**
  * 
  */
@@ -22,13 +24,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Charisma|EntityComponent")
 	FString EntityId;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Charisma|EntityComponent")
-	bool StartLive = false;
-
-
 	UPROPERTY(BlueprintReadOnly, Category = "Charisma|EntityComponent")
-	bool IsLive;
+	bool IsOnline;
 
-	UFUNCTION(BlueprintCallable, Category = "Charisma|EntityComponent")
-	void SetLive(bool live);
+	UPROPERTY(BlueprintAssignable, Category = "Charisma|EntityComponent")
+	FMessageReceivedDelegate OnMessage;
 };

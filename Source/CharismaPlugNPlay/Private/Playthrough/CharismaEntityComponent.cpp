@@ -6,10 +6,4 @@
 // Sets default values for this component's properties
 UCharismaEntityComponent::UCharismaEntityComponent()
 {
-	IsLive = StartLive;
-}
-
-void UCharismaEntityComponent::SetLive(bool live) 
-{
-	IsLive = live;
 }

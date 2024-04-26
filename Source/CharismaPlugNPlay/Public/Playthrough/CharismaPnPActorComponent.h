@@ -8,8 +8,6 @@
 
 #include "CharismaPnPActorComponent.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnResolve);
-
 /**
  * 
  */
@@ -22,9 +20,4 @@ public:
     // Sets default values for this component's properties
 	UCharismaPnPActorComponent();
 
-	UFUNCTION(BlueprintCallable, Category = "Charisma|New Actor")
-	void Resolve();
-
-	UPROPERTY(BlueprintAssignable, Category = "Charisma|New Actor")
-	FOnResolve OnResolve;
 };

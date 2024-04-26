@@ -8,7 +8,7 @@
 
 #include "CharismaInteractableComponent.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnInteract);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnInteractDelegate);
 
 /**
  * 
@@ -24,9 +24,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Charisma|Interactable")
 	void Interact();
 
-	UPROPERTY(BlueprintAssignable, Category = "Charisma|Interactable")
-	FOnInteract OnInteract;
-
 	UFUNCTION(BlueprintCallable, Category = "Charisma|Interactable")
 	bool HasBeenUsed();
 
@@ -38,6 +35,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Charisma|Interactable")
 	void ResetUsage();
+
+	UPROPERTY(BlueprintAssignable, Category = "Charisma|Interactable")
+	FOnInteractDelegate OnInteract;
 
 private:
 	UPROPERTY()
