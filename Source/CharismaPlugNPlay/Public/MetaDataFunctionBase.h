@@ -14,10 +14,11 @@ class CHARISMAPLUGNPLAY_API UMetaDataFunctionBase : public UObject
 {
 	GENERATED_BODY()
 
-public:
-	UFUNCTION(BlueprintCallable, Category = "Charisma|PnP MetaData")
-	void Execute(FString metaData);
+	// TODO: ADD METADATA_ID AND OTHER VARIABLIES THAT ARE IN THE BASE BP
+protected:
+	UFUNCTION(BlueprintImplementableEvent, Category = "Charisma|PnP MetaData")
+	void Execute(const FString& metaData);
 
-	UFUNCTION(BlueprintCallable, Category = "Charisma|PnP MetaData")
+	UFUNCTION(BlueprintImplementableEvent, Category = "Charisma|PnP MetaData")
 	void SetDependencies();
 };

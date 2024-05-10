@@ -8,7 +8,7 @@
 #include "CharismaGameMode.generated.h"
 
 USTRUCT(BlueprintType)
-struct FCharismaConnectionParams
+struct CHARISMAPLUGNPLAY_API FCharismaConnectionParams
 {
 	GENERATED_USTRUCT_BODY()
 

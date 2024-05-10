@@ -3,13 +3,3 @@
 
 #include "MetaDataFunctionBase.h"
 
-void UMetaDataFunctionBase::Execute(FString metaData)
-{
-	
-}
-
-void UMetaDataFunctionBase::SetDependencies()
-{
-	
-}
-
