@@ -2,6 +2,7 @@
 
 #include "Playthrough/CharismaPlaythroughInstance.h"
 #include "CharismaAPI.h"
+#include "GameMode/CharismaGameMode.h"
 #include "Kismet/GameplayStatics.h"
 
 
@@ -16,12 +17,12 @@ UCharismaPlaythroughInstance::~UCharismaPlaythroughInstance()
 
 }
 
-void UCharismaPlaythroughInstance::Initialise(int32 storyId, int32 storyVersion, FString apiKey, FString startGraphRefId, TArray<ECharismaSpeechAudioFormat> speechAudioFormat) 
+void UCharismaPlaythroughInstance::Initialise(FCharismaConnectionParams connectionParams, TArray<ECharismaSpeechAudioFormat> speechAudioFormat) 
 {
-	StoryId = storyId;
-	StoryVersion = storyVersion;
-	ApiKey = apiKey;
-	StartGraphRefId = startGraphRefId;
+	StoryId = connectionParams.StoryId;
+	StoryVersion = connectionParams.StoryVersion;
+	ApiKey = connectionParams.ApiKey;
+	StartGraphRefId = connectionParams.StartGraphRefId;
 	SpeechAudioFormat = speechAudioFormat;
 }
 
