@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "MetaDataFunctionBase.h"
 #include "GameFramework/GameModeBase.h"
 #include "CharismaGameMode.generated.h"
 
@@ -38,5 +39,14 @@ public:
 	
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma|GameMode")
 	FCharismaConnectionParams ConnectionParams;
+	
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma|GameMode")
+	TArray<TSubclassOf<UMetaDataFunctionBase>> MetaDataClasses;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma|GameMode" )
+	TArray<UMetaDataFunctionBase*> MetaDataFunctions;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma|GameMode" )
+	TArray<UCharismaEntityComponent*> BaseEntities;
 };
 
