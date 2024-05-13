@@ -6,6 +6,7 @@
 #include "MetaDataFunctionBase.h"
 #include "PlaythroughEntities.h"
 #include "GameFramework/GameModeBase.h"
+#include "Playthrough/CharismaPlayerComponent.h"
 #include "CharismaGameMode.generated.h"
 
 USTRUCT(BlueprintType)
@@ -50,6 +51,9 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma")
 	TArray<UCharismaEntityComponent*> BaseEntities;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma")
+	UCharismaPlayerComponent* PlayerComponent;
+	
 	UPROPERTY(BlueprintReadWrite, Category="Charisma")
 	FCharismaPlaythroughEntities PlaythroughEntities;
 };
