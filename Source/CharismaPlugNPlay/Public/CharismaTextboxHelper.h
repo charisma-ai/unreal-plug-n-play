@@ -1,3 +1,5 @@
+// Copyright 2024 Charisma Entertainment Ltd
+
 #pragma once
 
 #include "CoreMinimal.h"

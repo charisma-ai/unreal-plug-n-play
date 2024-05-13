@@ -1,7 +1,6 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright 2024 Charisma Entertainment Ltd
 
 #pragma once
-
 
 #include "CoreMinimal.h"
 #include "CharismaCharacterBase.h"
