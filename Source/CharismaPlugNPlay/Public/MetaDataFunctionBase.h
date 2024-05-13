@@ -17,7 +17,7 @@ class CHARISMAPLUGNPLAY_API UMetaDataFunctionBase : public UObject
 
 public:
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma|MetaFunctions")
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma|PnP MetaData")
 	FName MetadataID;
 	
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Charisma|PnP MetaData")
