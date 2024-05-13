@@ -4,6 +4,7 @@
 
 
 #include "CoreMinimal.h"
+#include "CharismaCharacterBase.h"
 #include "Playthrough/CharismaEntityComponent.h"
 #include "PlaythroughEntities.generated.h"
 
@@ -16,6 +17,11 @@ struct CHARISMAPLUGNPLAY_API FCharismaPlaythroughEntities
 	GENERATED_USTRUCT_BODY()
 
 	/** Please add a variable description */
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(DisplayName="Entities"))
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	ACharismaCharacterBase* Player;
+
+	
+	/** Please add a variable description */
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<UCharismaEntityComponent*> Entities;
 };

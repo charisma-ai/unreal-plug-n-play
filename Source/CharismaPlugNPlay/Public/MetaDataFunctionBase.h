@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PlaythroughEntities.h"
 #include "UObject/NoExportTypes.h"
 #include "MetaDataFunctionBase.generated.h"
 
@@ -14,11 +15,11 @@ class CHARISMAPLUGNPLAY_API UMetaDataFunctionBase : public UObject
 {
 	GENERATED_BODY()
 
-	// TODO: ADD METADATA_ID AND OTHER VARIABLIES THAT ARE IN THE BASE BP
-protected:
-	UFUNCTION(BlueprintImplementableEvent, Category = "Charisma|PnP MetaData")
-	void Execute(const FString& metaData);
+public:
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Charisma|PnP MetaData")
-	void SetDependencies();
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma|MetaFunctions")
+	FName MetadataID;
+	
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Charisma|PnP MetaData")
+	void Execute(const FString& metaData, const FCharismaPlaythroughEntities& playthroughEntities);
 };

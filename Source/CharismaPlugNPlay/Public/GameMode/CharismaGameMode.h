@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "MetaDataFunctionBase.h"
+#include "PlaythroughEntities.h"
 #include "GameFramework/GameModeBase.h"
 #include "CharismaGameMode.generated.h"
 
@@ -37,16 +38,19 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Charisma|GameMode")
 	void CollateAllCharismaEntities();
 	
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma|GameMode")
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma")
 	FCharismaConnectionParams ConnectionParams;
 	
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma|GameMode")
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma")
 	TArray<TSubclassOf<UMetaDataFunctionBase>> MetaDataClasses;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma|GameMode" )
+	UPROPERTY(BlueprintReadWrite, Category="Charisma")
 	TArray<UMetaDataFunctionBase*> MetaDataFunctions;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma|GameMode" )
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma")
 	TArray<UCharismaEntityComponent*> BaseEntities;
+
+	UPROPERTY(BlueprintReadWrite, Category="Charisma")
+	FCharismaPlaythroughEntities PlaythroughEntities;
 };
 
