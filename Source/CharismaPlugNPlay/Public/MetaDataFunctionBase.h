@@ -21,5 +21,5 @@ public:
 	FName MetadataID;
 	
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Charisma|PnP MetaData")
-	void Execute(const FString& metaData, const FCharismaPlaythroughEntities& playthroughEntities);
+	void Execute(const FString& metaData, const UCharismaPlaythroughData* playthroughData);
 };

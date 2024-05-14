@@ -1,13 +1,12 @@
 // Copyright 2024 Charisma Entertainment Ltd
 
-#include "GameMode/CharismaGameMode.h"
-
+#include "Playthrough/CharismaPlaythroughData.h"
 #include "CharismaEntityBase.h"
 #include "CharismaNpcCharacter.h"
 #include "CharismaPlayerCharacter.h"
 #include "Kismet/GameplayStatics.h"
 
-void ACharismaGameMode::CollateAllCharismaEntities()
+void UCharismaPlaythroughData::CollateAllCharismaEntities(TArray<TSubclassOf<UMetaDataFunctionBase>> MetaClasses)
 {
 	// Find and set charisma player component
 	AActor* PlayerActor = UGameplayStatics::GetActorOfClass(GetWorld(), ACharismaPlayerCharacter::StaticClass());
@@ -22,7 +21,7 @@ void ACharismaGameMode::CollateAllCharismaEntities()
 	for (const auto& Entity : FoundEntities)
 	{
 		UCharismaEntityComponent* EntityComponent = StaticCast<UCharismaEntityComponent*>(Entity->GetComponentByClass(UCharismaEntityComponent::StaticClass()));
-		BaseEntities.Add(EntityComponent);
+		Entities.Add(EntityComponent);
 	}
 	
 	// Find and set all charisma entity components found on NPCs
@@ -32,16 +31,15 @@ void ACharismaGameMode::CollateAllCharismaEntities()
 	for (const auto& NPC : FoundNpcs)
 	{
 		UCharismaEntityComponent* EntityComponent = StaticCast<UCharismaEntityComponent*>(NPC->GetComponentByClass(UCharismaEntityComponent::StaticClass()));
-		BaseEntities.Add(EntityComponent);
+		Entities.Add(EntityComponent);
 	}
 
 	// Create and store instances of all metadata functions based on provided classes
-	for(const auto& MetaClass : MetaDataClasses)
+	for(const auto& MetaClass : MetaClasses)
 	{
 		MetaDataFunctions.Add(NewObject<UMetaDataFunctionBase>(GetTransientPackage(), MetaClass));
 	}
 
-	// Set PlaythroughEntities entities
-	PlaythroughEntities.Entities = BaseEntities;
-	PlaythroughEntities.Player = PlayerCharacter;
+	// Set entities and play character
+	Player = PlayerCharacter;
 }
