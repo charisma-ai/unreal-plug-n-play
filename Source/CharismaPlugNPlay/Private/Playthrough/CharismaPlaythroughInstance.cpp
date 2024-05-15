@@ -2,7 +2,7 @@
 
 #include "Playthrough/CharismaPlaythroughInstance.h"
 #include "CharismaAPI.h"
-#include "GameMode/CharismaGameMode.h"
+#include "Playthrough/CharismaConnectionParams.h"
 #include "Kismet/GameplayStatics.h"
 
 

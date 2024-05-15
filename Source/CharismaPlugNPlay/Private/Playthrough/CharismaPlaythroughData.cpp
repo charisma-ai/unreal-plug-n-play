@@ -8,6 +8,9 @@
 
 void UCharismaPlaythroughData::CollateAllCharismaEntities(TArray<TSubclassOf<UMetaDataFunctionBase>> MetaClasses)
 {
+	Entities.Empty();
+	MetaDataFunctions.Empty();
+	
 	// Find and set charisma player component
 	AActor* PlayerActor = UGameplayStatics::GetActorOfClass(GetWorld(), ACharismaPlayerCharacter::StaticClass());
 	ACharismaCharacterBase* PlayerCharacter = StaticCast<ACharismaCharacterBase*>(PlayerActor);
@@ -33,7 +36,7 @@ void UCharismaPlaythroughData::CollateAllCharismaEntities(TArray<TSubclassOf<UMe
 		UCharismaEntityComponent* EntityComponent = StaticCast<UCharismaEntityComponent*>(NPC->GetComponentByClass(UCharismaEntityComponent::StaticClass()));
 		Entities.Add(EntityComponent);
 	}
-
+	
 	// Create and store instances of all metadata functions based on provided classes
 	for(const auto& MetaClass : MetaClasses)
 	{

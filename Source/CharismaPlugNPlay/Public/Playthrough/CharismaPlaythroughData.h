@@ -7,7 +7,6 @@
 #include "CoreMinimal.h"
 #include "MetaDataFunctionBase.h"
 #include "PlaythroughEntities.h"
-#include "Playthrough/CharismaConnectionParams.h"
 #include "Playthrough/CharismaPlayerComponent.h"
 #include "CharismaPlaythroughData.generated.h"
 
@@ -20,21 +19,18 @@ class CHARISMAPLUGNPLAY_API UCharismaPlaythroughData : public UObject
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable, Category="Charisma|GameMode")
+	UFUNCTION(BlueprintCallable, Category="Charisma")
 	void CollateAllCharismaEntities(TArray<TSubclassOf<UMetaDataFunctionBase>> MetaClasses);
 	
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma")
-	FCharismaConnectionParams ConnectionParams;
-	
-	UPROPERTY(BlueprintReadWrite, Category="Charisma")
+	UPROPERTY(BlueprintReadOnly, Category="Charisma")
 	TArray<UMetaDataFunctionBase*> MetaDataFunctions;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Charisma")
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category="Charisma")
 	UCharismaPlayerComponent* PlayerComponent;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category="Charisma")
 	ACharismaCharacterBase* Player;
 	
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category="Charisma")
 	TArray<UCharismaEntityComponent*> Entities;
 };
