@@ -57,7 +57,7 @@ public:
 
 	// Starts the playthrough object, interfacing with the Charisma server
 	UFUNCTION(BlueprintCallable, Category = "Charisma|PnP Playthrough")
-	void Initialise(int32 storyId, int32 storyVersion, FString apiKey, FString startGraphRefId, TArray<ECharismaSpeechAudioFormat> speechAudioFormat);
+	void Initialise(FCharismaConnectionParams connectionParams, TArray<ECharismaSpeechAudioFormat> speechAudioFormat);
 
 	// Starts the playthrough object, interfacing with the Charisma server
 	UFUNCTION(BlueprintCallable, Category = "Charisma|PnP Playthrough")
