@@ -2,10 +2,8 @@
 
 #include "Playthrough/CharismaPlaythroughInstance.h"
 #include "CharismaAPI.h"
-#include "Playthrough/CharismaConnectionParams.h"
+#include "CharismaConnectionParams.h"
 #include "Kismet/GameplayStatics.h"
-
-
 
 UCharismaPlaythroughInstance::UCharismaPlaythroughInstance()
 {
