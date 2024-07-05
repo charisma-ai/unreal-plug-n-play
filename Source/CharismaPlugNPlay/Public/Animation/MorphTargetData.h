@@ -9,9 +9,9 @@ struct FMorphTargetData
 	GENERATED_USTRUCT_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	FString MorphTargetName;
+	FString MorphTargetName = "";
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float Intensity;
+	float Intensity = 0;
 
 };
