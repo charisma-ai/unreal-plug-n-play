@@ -28,6 +28,26 @@ If you have any questions or need a hand, please reach out to us at [hello@chari
 
 Please refer to our [SDK Documentation page](https://charisma.ai/docs/sdks) and [Unreal Tutorial series](https://www.youtube.com/playlist?list=PLJL7mxAoErKy_ByCa6C1vb3FEnQnE1-kp) for more information on how to setup and use the Plug-N-Play for your stories!
 
+## Enabling microphone input in Unreal Engine
+
+In order to be able to use microphone/voice input, you must modify the `DefaultEngine.ini` file at the project level.
+
+You can find this configuration file under `PROJECT FOLDER -> Config -> DefaultEngine.ini`
+
+Inside this config file, add these lines to enbable microphone and voice input:
+
+```
+[Voice]
+bEnabled=true
+
+[SystemSettings]
+voice.SilenceDetectionThreshold=-1
+voice.MicNoiseGateThreshold=-1
+
+[OnlineSubsystem]
+bHasVoiceEnabled=true
+```
+
 ## LipsyncOVR Troubleshooting
 
 You may come across various build issues when building the LipsyncOVR package. This is because the plugin was built for older versions of Unreal Engine, and some variables and method calls need to be updated. Here are the common steps for fixing the issues for UE version 5.2 through 5.4:
