@@ -105,7 +105,6 @@ void UCharismaPlaythroughInstance::EndPlaythrough()
 void UCharismaPlaythroughInstance::StartSpeechRecognition(bool& bWasSuccessful,
 	const ECharismaSpeechRecognitionService service,
 	const FString languageCode,
-	const FString encoding,
 	const int32 sampleRate)
 {
 	if (!Started)
@@ -125,7 +124,7 @@ void UCharismaPlaythroughInstance::StartSpeechRecognition(bool& bWasSuccessful,
 		return;
 	}
 
-	Playthrough->StartSpeechRecognition(bWasSuccessful, service, languageCode, encoding, sampleRate);
+	Playthrough->StartSpeechRecognition(bWasSuccessful, service, languageCode, sampleRate);
 }
 
 void UCharismaPlaythroughInstance::StopSpeechRecognition()
