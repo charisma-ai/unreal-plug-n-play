@@ -19,8 +19,7 @@ class CHARISMAPLUGNPLAY_API UCharismaPlaythroughInstance : public UActorComponen
 {
 	GENERATED_BODY()
 private:
-
-	FString PlaythroughToken;
+	
 	FString PlaythroughUuid;
 	FString ConversationUuid;
 
@@ -43,6 +42,9 @@ public:
 	UCharismaPlaythroughInstance();
 	~UCharismaPlaythroughInstance();
 
+	UPROPERTY(BlueprintReadWrite, Category = "Charisma|PnP Playthrough")
+	FString PlaythroughToken;
+	
 	UPROPERTY(BlueprintReadWrite)
 	UCharismaPlayerComponent* CharismaPlayer;
 
