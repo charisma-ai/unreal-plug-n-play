@@ -63,14 +63,18 @@ You may come across various build issues when building the LipsyncOVR package. T
 -User error: Default device is no longer supported; ue will automatically grab the closest mic device if you provide an empty string
   - Replace `#define DEFAULT_DEVICE_NAME TEXT("Default Device")` with `#define DEFAULT_DEVICE_NAME TEXT("")`
     
-### 5.3 - Same as 5.2, and also:
+### 5.3 - Same as all above, and also:
 
 - Replace instance of `#include "AssetRegistryModule.h"` from OvrLipsyncEditorModuleto `#include "AssetRegistry/AssetRegistryModule.h"`
 - Replace instances of `#include "Voice/Public/VoiceModule.h"` to `#include "VoiceModule.h"` 
 - In OVRLipsyncEditorModule, change the line `CreatePackage(NULL, *SequencePath);` to `CreatePackage(*SequencePath);`
 
-### 5.4 - Same as 5.3 and also:
+### 5.4 - Same as all above, and also:
 
 - In OVRLipSyncEditorModule.cpp change line `if (SoundWave->InitAudioResource(AudioDevice->GetRuntimeFormat(SoundWave)))` to `if (SoundWave->InitAudioResource(SoundWave->GetRuntimeFormat()))`
 - To fix LogOvrLipsync errors:
   - Add line `#include "OVRLipSyncModule.h"` to line index 27, in `OvrLipsyncLiveACtorComponent.cpp`
+ 
+### 5.5 -  Same as all above, and also:
+
+- In OVRLipSyncEditorModule.cpp change line `SoundWave->DecompressionType = DTYPE_Native;` to `SoundWave->DecompressionType = DTYPE_RealTime;`
