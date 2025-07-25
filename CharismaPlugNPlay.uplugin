@@ -27,7 +27,7 @@
 	],
 	"Plugins": [
 		{ 
-			"Name": "charisma-unreal",
+			"Name": "charisma-sdk-unreal",
 			"Enabled": true 
 		} 
 	]
