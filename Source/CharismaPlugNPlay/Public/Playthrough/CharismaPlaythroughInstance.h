@@ -86,6 +86,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Charisma|PnP Playthrough")
 	void SendAction(FString action);
 
+	// Sends a tap event to the current playthrough
+	UFUNCTION(BlueprintCallable, Category = "Charisma|PnP Playthrough")
+	void SendTap();
+	
 	// Triggers when a message is received from the playthrough
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Charisma|PnP Playthrough")
 	void OnMessageReceived(const FCharismaMessageEvent& messageEvent);

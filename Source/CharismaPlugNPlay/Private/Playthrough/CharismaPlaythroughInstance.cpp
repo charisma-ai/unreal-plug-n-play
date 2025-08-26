@@ -71,6 +71,28 @@ void UCharismaPlaythroughInstance::SendAction(FString action)
 	Playthrough->Action(ConversationUuid, action);
 }
 
+void UCharismaPlaythroughInstance::SendTap() 
+{
+	if (!Started) 
+	{
+		return;
+	}
+
+	if (Playthrough == nullptr) 
+	{
+		UE_LOG(LogTemp, Error, TEXT("[Tap] Attempted Action for inexistant Playthrough."));
+		return;
+	}
+
+	if (ConnectionState != ECharismaPlaythroughConnectionState::Connected) 
+	{
+		UE_LOG(LogTemp, Error, TEXT("[Tap] Attempted Action while Playthrough is not connected."));
+		return;
+	}
+
+	Playthrough->Tap(ConversationUuid);
+}
+
 // Sends an action to the current playthrough
 void UCharismaPlaythroughInstance::EndPlaythrough() 
 {
