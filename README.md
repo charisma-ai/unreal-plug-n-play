@@ -1,6 +1,6 @@
 # Charisma Plug-N-Play package for Unreal
 
-This Unreal Engine plugin is verified to work with projects using Unreal Engine versions up to `5.6`.
+This Unreal Engine plugin is verified to work with projects using Unreal Engine versions up to `5.2` and above.
 
 If you have any questions or need a hand, please reach out to us at [hello@charisma.ai](mailto:hello@charisma.ai)!
 
